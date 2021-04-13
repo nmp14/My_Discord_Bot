@@ -18,11 +18,13 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
+    const prefix = "!"
     const args = msg.content.split(/ +/);
-    const command = args.shift().toLowerCase();
+    const prefixedCommand = args.shift().toLowerCase();
+    const command = prefixedCommand.split("!")[1];
     console.info(`Called command: ${command}`);
 
-    if (!bot.commands.has(command)) return;
+    if (!bot.commands.has(command) || !msg.content.startsWith(prefix)) return;
 
     try {
         bot.commands.get(command).execute(msg, args);
