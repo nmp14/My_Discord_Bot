@@ -22,9 +22,10 @@ bot.on('message', msg => {
     const args = msg.content.split(/ +/);
     const prefixedCommand = args.shift().toLowerCase();
     const command = prefixedCommand.split("!")[1];
-    console.info(`Called command: ${command}`);
-
-    if (!bot.commands.has(command) || !msg.content.startsWith(prefix)) return;
+    if (!msg.author.bot) {
+        console.info(`Called command: ${command}`);
+    }
+    if (!bot.commands.has(command) || !msg.content.startsWith(prefix) || msg.author.bot) return;
 
     try {
         bot.commands.get(command).execute(msg, args);
