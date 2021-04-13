@@ -1,0 +1,25 @@
+{
+  "name": "My_Discord_Bot",
+  "version": "1.0.0",
+  "description": "Credits for beginning setup of bot: https://github.com/sitepoint-editors/discord-bot-sitepoint.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmp14/My_Discord_Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmp14/My_Discord_Bot/issues"
+  },
+  "homepage": "https://github.com/nmp14/My_Discord_Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0"
+  }
+}
