@@ -20,6 +20,8 @@
   "homepage": "https://github.com/nmp14/My_Discord_Bot#readme",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
   }
 }
